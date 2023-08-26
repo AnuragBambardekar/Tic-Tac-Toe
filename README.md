@@ -16,7 +16,7 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or X
 - Recursion
 
 # Steps
-1. Model the Tic-Tac-Toe Game Domain
+## 1. Model the Tic-Tac-Toe Game Domain
 - Create the folder directory
 - Edit the `pyproject.toml` file.
 ```
@@ -62,6 +62,19 @@ A starting player has an advantage, so when they win, they’ll have left more m
 ```
 
 - Simulate Moves by Producing New Game States
+
+## 2. Scaffold a generic tic-tac-toe game engine
+
+- We have all the domain models defined for the tic-tac-toe library.
+- Let's build a game engine to facilitate tic-tac-toe gameplay.
+- Create `engine.py`, `players.py` and `renderers.py` inside `game` directory.
+
+- Pull the Players’ Moves to Drive the Game [**need to have two players, something to draw on, and a set of rules to follow. We can express these elements as immutable data classes.**]
+
+- Let the Computer Pick a Random Move. [**Implement 2 abstract base classes, Player and ComputerPlayer, as well as one concrete RandomComputerPlayer, which you’ll be able to use in your games.**]
+
+- Make an Abstract Tic-Tac-Toe Grid Renderer
+
 
 # References
 - https://realpython.com/tic-tac-toe-ai-python/#demo-tic-tac-toe-ai-player-in-python

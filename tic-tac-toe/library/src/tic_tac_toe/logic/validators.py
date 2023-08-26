@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
+    from game.players import Player
     from models import Grid, GameState, Mark
 """
 You import Grid conditionally. The TYPE_CHECKING constant is false at 
@@ -68,3 +69,11 @@ def validate_winner(
         else:
             if grid.o_count != grid.x_count:
                 raise InvalidGameState("Wrong number of Os")
+
+"""
+use the identity comparison again to check both players’ marks and 
+prevent the game from starting when both players use the same mark.
+"""          
+def validate_players(player1: Player, player2: Player) -> None:
+    if player1.mark is player2.mark:
+        raise ValueError("Players must use different marks")
