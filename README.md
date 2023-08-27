@@ -80,8 +80,31 @@ A starting player has an advantage, so when they win, they’ll have left more m
 - Render the Grid With ANSI Escape Codes [**Implement a bare-bones game running in the text-based console.**]
 - Edit the `frontends/console/renderers.py`.
 
+- Create a script for playing between two computers.
+
+- Create an Interactive Console player. [**play a tic-tac-toe match between a human and a computer player or two human players, in addition to the two computer players.**] - Create `players.py` and accept user input.
+
+| Argument	| Default Value | Description |
+| ----- | ----- | ----- |
+|-X	| human	| Assigns X to the specified player |
+|-O	| random	| Assigns O to the specified player |
+|--starting	| X	|Determines the starting player’s mark |
+
+- Human vs Human Player
+```cmd
+python -m console -X human -O human
+```
+
+- Human vs Random Player
+```cmd
+python -m console -X human -O random
+```
+
+## 4. Equip the Computer With Artificial Intelligence
+
+
 # **Big Note:**
-Run all this in a *virtual environment*.
+Run this project in a *virtual environment*.
 - Activate Virtual Environment
 ```cmd
 cd .\tic-tac-toe\ 
