@@ -102,6 +102,37 @@ python -m console -X human -O random
 
 ## 4. Equip the Computer With Artificial Intelligence
 
+- creating another computer player, this one equipped with basic artificial intelligence. Specifically, it’ll use the minimax algorithm.
+
+```
+The Minimax algorithm is a decision-making algorithm commonly used in two-player turn-based games like chess, checkers, Tic-Tac-Toe, and more. Its primary purpose is to determine the optimal move for a player, assuming that the opponent will also make optimal moves. The Minimax algorithm is built on the concept of minimizing the maximum possible loss, hence the name "Minimax."
+```
+
+- Evaluate the Score of a Finished Game [**three possible outcomes of the game, which you can assign arbitrary numeric values, for example:**]
+    - Player loses: -1
+    - Player ties: 0
+    - Player wins: 1
+
+**Strategy:**
+- maximizing player will try to maximize the game’s overall score. Therefore, greater values should correspond to better outcomes, as viewed from their perspective. The minimizing player, on the other hand, is their opponent, who tries to lower the score as much as possible.
+
+- express this numeric scale in Python code by adding the following method to your GameState model.
+
+![Tic-Tac-Toe Game Tree With Propagated Scores](game_tree.webp)
+
+- In the above diagram: maximizing player X, whose turns are depicted in green.
+
+- The minimax algorithm starts by recursively exploring the tree to look ahead and find all the possible game outcomes. Once those are found, it computes their scores and backtracks to the starting node. If it’s the maximizing player’s turn that leads to the next position, then the algorithm picks the maximum score at that level. Otherwise, it picks the minimum score, assuming the opponent will never make mistakes.
+
+- Create a new `minimax` module and implement the algorithm and test it in `test.py`
+
+- Make an undefeated Minimax computer player
+
+- Human vs Minimax Computer (Never Win!)
+```
+(venv) $ cd frontends/
+(venv) $ python -m console -X human -O minimax
+```
 
 # **Big Note:**
 Run this project in a *virtual environment*.

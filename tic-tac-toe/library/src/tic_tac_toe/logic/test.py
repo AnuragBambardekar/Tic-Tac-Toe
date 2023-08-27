@@ -1,4 +1,5 @@
 from tic_tac_toe.logic.models import Mark, Grid, GameState
+from tic_tac_toe.logic.minimax import minimax
 
 print(Mark.CROSS)
 print(Mark.NAUGHT)
@@ -69,3 +70,19 @@ print(game_state.winning_cells)
 
 game_state = GameState(Grid("XXOXOX  O"))
 print(game_state.possible_moves)
+
+# testing the minimax algorithm
+def preview(cells):
+    print(cells[:3], cells[3:6], cells[6:], sep="\n")
+
+game_state = GameState(Grid("XXO O X O"), starting_mark=Mark("X"))
+for move in game_state.possible_moves:
+    print("Score:", minimax(move, maximizer=Mark("X")))
+    preview(move.after_state.grid.cells)
+    print("-" * 10)
+
+"""
+computed scores correspond to the edge weights in the game tree that we 
+saw before. Finding the best move is only a matter of choosing the one 
+with the highest resulting score.
+"""
