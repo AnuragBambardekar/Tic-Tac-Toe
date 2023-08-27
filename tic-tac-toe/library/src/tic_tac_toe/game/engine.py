@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from players import Player
-from renderers import Renderer
-from logic.exceptions import InvalidMove
-from logic.models import GameState, Grid, Mark
-from logic.validators import validate_players
+from tic_tac_toe.game.players import Player
+from tic_tac_toe.game.renderers import Renderer
+from tic_tac_toe.logic.exceptions import InvalidMove
+from tic_tac_toe.logic.models import GameState, Grid, Mark
+from tic_tac_toe.logic.validators import validate_players
 
 from typing import Callable, TypeAlias
 ErrorHandler: TypeAlias = Callable[[Exception], None]

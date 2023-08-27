@@ -2,8 +2,8 @@ import abc
 import time
 import random
 
-from logic.models import Mark, GameState, Move
-from logic.exceptions import InvalidMove
+from tic_tac_toe.logic.models import Mark, GameState, Move
+from tic_tac_toe.logic.exceptions import InvalidMove
 
 """
 An abstract class is one that you can’t instantiate because its objects 

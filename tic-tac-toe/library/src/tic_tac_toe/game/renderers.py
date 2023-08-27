@@ -1,6 +1,6 @@
 import abc
 
-from logic.models import GameState
+from tic_tac_toe.logic.models import GameState
 
 """
 This could’ve been implemented as a regular function because the renderer 

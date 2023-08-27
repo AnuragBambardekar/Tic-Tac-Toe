@@ -1,4 +1,4 @@
-from models import Mark, Grid, GameState
+from tic_tac_toe.logic.models import Mark, Grid, GameState
 
 print(Mark.CROSS)
 print(Mark.NAUGHT)

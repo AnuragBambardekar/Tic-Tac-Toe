@@ -10,8 +10,8 @@ import re
 from dataclasses import dataclass
 from functools import cached_property
 
-from validators import validate_grid, validate_game_state
-from exceptions import InvalidMove
+from tic_tac_toe.logic.validators import validate_grid, validate_game_state
+from tic_tac_toe.logic.exceptions import InvalidMove
 
 # eight winning patterns for each of the two players
 WINNING_PATTERNS = (

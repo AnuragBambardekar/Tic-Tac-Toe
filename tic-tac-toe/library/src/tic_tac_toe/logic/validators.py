@@ -1,8 +1,8 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from game.players import Player
-    from models import Grid, GameState, Mark
+    from tic_tac_toe.game.players import Player
+    from tic_tac_toe.logic.models import Grid, GameState, Mark
 """
 You import Grid conditionally. The TYPE_CHECKING constant is false at 
 runtime, but third-party tools, such as mypy, will pretend it’s true 
@@ -12,7 +12,7 @@ run.
 import re
 # from models import Grid # causes error due to circular import
 
-from exceptions import InvalidGameState
+from tic_tac_toe.logic.exceptions import InvalidGameState
 
 
 

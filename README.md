@@ -75,6 +75,31 @@ A starting player has an advantage, so when they win, they’ll have left more m
 
 - Make an Abstract Tic-Tac-Toe Grid Renderer
 
+## 3. Build a Game Front End for the console
+
+- Render the Grid With ANSI Escape Codes [**Implement a bare-bones game running in the text-based console.**]
+- Edit the `frontends/console/renderers.py`.
+
+# **Big Note:**
+Run all this in a *virtual environment*.
+- Activate Virtual Environment
+```cmd
+cd .\tic-tac-toe\ 
+cd .\venv\Scripts\
+.\activate     
+```
+- Run the test script inside the tic-tac-toe library
+```cmd   
+cd .\library\src\tic_tac_toe\logic\
+python .\test.py
+```
+- Run the play.py script to see see two artificial players making random moves, leading to different outcomes each time.
+```cmd
+cd ../..     
+cd .\frontends\  
+python .\play.py
+```
+
 
 # References
 - https://realpython.com/tic-tac-toe-ai-python/#demo-tic-tac-toe-ai-player-in-python
