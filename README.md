@@ -139,7 +139,7 @@ Run this project in a *virtual environment*.
 - Create a virtual Environment
 ```cmd
 cd .\tic-tac-toe\ 
-python3 -m venv venv/
+python -m venv venv/
 ```
 - Activate Virtual Environment
 ```cmd
