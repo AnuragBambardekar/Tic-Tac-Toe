@@ -136,6 +136,11 @@ The Minimax algorithm is a decision-making algorithm commonly used in two-player
 
 # **Big Note:**
 Run this project in a *virtual environment*.
+- Create a virtual Environment
+```cmd
+cd .\tic-tac-toe\ 
+python3 -m venv venv/
+```
 - Activate Virtual Environment
 ```cmd
 cd .\tic-tac-toe\ 
